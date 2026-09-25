@@ -1,660 +1,666 @@
 <!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>KD Creation Jodhpur | Social Media & Content Production</title>  <meta name="description" content="KD Creation Jodhpur helps local businesses grow through social media management, reels, video production, editing, branding and digital promotion.">  <meta name="keywords" content="KD Creation Jodhpur, Social Media Marketing Jodhpur, Video Production Jodhpur, Reels Jodhpur, Digital Marketing Jodhpur, Content Creation Jodhpur">  <meta name="author" content="KD Creation Jodhpur">  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #080808;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: min(1120px, 92%);
-      margin: auto;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(8,8,8,0.94);
-      border-bottom: 1px solid #222;
-      backdrop-filter: blur(10px);
-    }
-
-    nav {
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
-
-    .logo span {
-      color: #e50914;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 22px;
-      font-size: 14px;
-    }
-
-    .nav-links a:hover {
-      color: #e50914;
-    }
-
-    .hero {
-      min-height: 88vh;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      background:
-        radial-gradient(circle at 50% 30%, rgba(229,9,20,.18), transparent 38%),
-        #080808;
-    }
-
-    .hero-content {
-      width: 100%;
-    }
-
-    .eyebrow {
-      color: #e50914;
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-size: clamp(44px, 8vw, 92px);
-      line-height: .95;
-      letter-spacing: -3px;
-      margin-bottom: 24px;
-    }
-
-    h1 span {
-      color: #e50914;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      color: #cfcfcf;
-      font-size: 18px;
-    }
-
-    .buttons {
-      margin-top: 34px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .btn {
-      padding: 14px 24px;
-      border-radius: 50px;
-      font-weight: 700;
-      border: 1px solid #333;
-      transition: .25s;
-    }
-
-    .btn-primary {
-      background: #e50914;
-      border-color: #e50914;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      background: #ff1b26;
-    }
-
-    .btn-secondary {
-      background: transparent;
-    }
-
-    .btn-secondary:hover {
-      border-color: #e50914;
-      color: #e50914;
-    }
-
-    section {
-      padding: 90px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 48px;
-    }
-
-    .section-title small {
-      color: #e50914;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-weight: 700;
-    }
-
-    .section-title h2 {
-      font-size: clamp(32px, 5vw, 52px);
-      margin-top: 8px;
-    }
-
-    .about {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .about h3 {
-      font-size: 34px;
-      margin-bottom: 18px;
-    }
-
-    .about p {
-      color: #bbb;
-      margin-bottom: 15px;
-    }
-
-    .highlight {
-      border-left: 3px solid #e50914;
-      padding-left: 20px;
-      color: #fff;
-      font-size: 20px;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .card {
-      border: 1px solid #242424;
-      background: #101010;
-      border-radius: 18px;
-      padding: 28px;
-      transition: .25s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: #e50914;
-    }
-
-    .card-number {
-      color: #e50914;
-      font-weight: 800;
-      margin-bottom: 14px;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      font-size: 21px;
-    }
-
-    .card p {
-      color: #aaa;
-      font-size: 14px;
-    }
-
-    .portfolio {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .portfolio-item {
-      min-height: 260px;
-      border-radius: 18px;
-      border: 1px solid #252525;
-      background: linear-gradient(145deg, #151515, #090909);
-      display: flex;
-      align-items: flex-end;
-      padding: 24px;
-      overflow: hidden;
-    }
-
-    .portfolio-item h3 {
-      font-size: 22px;
-    }
-
-    .portfolio-item p {
-      color: #aaa;
-      font-size: 13px;
-    }
-
-    .process {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .step {
-      text-align: center;
-      padding: 25px 15px;
-    }
-
-    .step span {
-      display: inline-flex;
-      width: 50px;
-      height: 50px;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      border: 1px solid #e50914;
-      color: #e50914;
-      font-weight: 800;
-      margin-bottom: 15px;
-    }
-
-    .step p {
-      color: #aaa;
-      font-size: 14px;
-    }
-
-    .cta {
-      text-align: center;
-      background: #111;
-      border-top: 1px solid #222;
-      border-bottom: 1px solid #222;
-    }
-
-    .cta h2 {
-      font-size: clamp(34px, 6vw, 62px);
-      margin-bottom: 15px;
-    }
-
-    .cta p {
-      color: #aaa;
-      max-width: 650px;
-      margin: auto;
-    }
-
-    .contact {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-    }
-
-    .contact-box {
-      padding: 30px;
-      border: 1px solid #252525;
-      border-radius: 18px;
-      background: #101010;
-    }
-
-    .contact-box h3 {
-      margin-bottom: 12px;
-    }
-
-    .contact-box p {
-      color: #aaa;
-      margin-bottom: 8px;
-    }
-
-    footer {
-      padding: 35px 0;
-      border-top: 1px solid #222;
-      color: #777;
-      text-align: center;
-      font-size: 13px;
-    }
-
-    .whatsapp {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 2000;
-      background: #25D366;
-      color: #000;
-      padding: 14px 18px;
-      border-radius: 50px;
-      font-weight: 800;
-      box-shadow: 0 8px 30px rgba(0,0,0,.4);
-    }
-
-    @media (max-width: 800px) {
-      .nav-links {
-        display: none;
-      }
-
-      .about,
-      .contact {
-        grid-template-columns: 1fr;
-      }
-
-      .services,
-      .portfolio {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .process {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 560px) {
-      section {
-        padding: 70px 0;
-      }
-
-      .services,
-      .portfolio,
-      .process {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        min-height: 82vh;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-    }
-  </style></head><body><header>
-  <div class="container">
-    <nav>
-      <div class="logo">KD <span>CREATION</span></div>  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#work">Work</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
-  </div>
-</header><main><section class="hero">
-  <div class="container hero-content">
-    <div class="eyebrow">Jodhpur • Rajasthan</div><h1>
-  Create.<br>
-  Capture.<br>
-  <span>Inspire.</span>
-</h1>
-
-<p>
-  Social Media Growth & Content Production Partner
-  for local businesses, brands, shops and businesses.
-</p>
-
-<div class="buttons">
-  <a class="btn btn-primary"
-     href="https://wa.me/919571666080?text=Hello%20KD%20Creation%2C%20I%20want%20to%20discuss%20your%20services."
-     target="_blank">
-    Start a Project
-  </a>
-
-  <a class="btn btn-secondary" href="#work">
-    View Our Work
-  </a>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>KD Creation Jodhpur | Social Media & Content Production</title><meta name="description"
+content="KD Creation Jodhpur — Social Media Growth, Reels, Video Production, Editing and Digital Content.">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#070707;
+color:#fff;
+line-height:1.6;
+}
+
+a{
+color:inherit;
+text-decoration:none;
+}
+
+.container{
+width:min(1150px,92%);
+margin:auto;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(7,7,7,.94);
+backdrop-filter:blur(12px);
+border-bottom:1px solid #222;
+}
+
+nav{
+height:72px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:21px;
+font-weight:900;
+letter-spacing:1px;
+}
+
+.logo span{
+color:#e50914;
+}
+
+.nav{
+display:flex;
+gap:22px;
+font-size:14px;
+}
+
+.nav a:hover{
+color:#e50914;
+}
+
+.hero{
+min-height:90vh;
+display:flex;
+align-items:center;
+text-align:center;
+background:
+radial-gradient(circle at center,rgba(229,9,20,.18),transparent 42%),
+#070707;
+}
+
+.hero-inner{
+width:100%;
+}
+
+.label{
+font-size:12px;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#e50914;
+font-weight:800;
+margin-bottom:18px;
+}
+
+h1{
+font-size:clamp(48px,9vw,100px);
+line-height:.92;
+letter-spacing:-4px;
+margin-bottom:28px;
+}
+
+h1 span{
+color:#e50914;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+color:#bdbdbd;
+font-size:18px;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:14px;
+flex-wrap:wrap;
+margin-top:32px;
+}
+
+.btn{
+padding:14px 25px;
+border-radius:50px;
+font-weight:800;
+border:1px solid #333;
+transition:.25s;
+}
+
+.primary{
+background:#e50914;
+border-color:#e50914;
+}
+
+.primary:hover{
+transform:translateY(-3px);
+}
+
+.secondary:hover{
+border-color:#e50914;
+color:#e50914;
+}
+
+section{
+padding:90px 0;
+}
+
+.section-head{
+text-align:center;
+margin-bottom:45px;
+}
+
+.section-head small{
+color:#e50914;
+letter-spacing:3px;
+text-transform:uppercase;
+font-weight:800;
+}
+
+.section-head h2{
+font-size:clamp(32px,5vw,55px);
+margin-top:8px;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:55px;
+align-items:center;
+}
+
+.about h3{
+font-size:35px;
+margin-bottom:18px;
+}
+
+.about p{
+color:#aaa;
+margin-bottom:16px;
+}
+
+.quote{
+border-left:3px solid #e50914;
+padding:20px;
+font-size:22px;
+background:#101010;
+border-radius:0 15px 15px 0;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.card{
+padding:28px;
+border:1px solid #252525;
+border-radius:18px;
+background:#101010;
+transition:.25s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:#e50914;
+}
+
+.number{
+color:#e50914;
+font-weight:900;
+margin-bottom:12px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+color:#aaa;
+font-size:14px;
+}
+
+.experience{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.experience-card{
+padding:35px;
+background:#101010;
+border:1px solid #252525;
+border-radius:20px;
+}
+
+.experience-card .tag{
+color:#e50914;
+font-size:12px;
+font-weight:800;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+.experience-card h3{
+font-size:27px;
+margin:10px 0;
+}
+
+.experience-card p{
+color:#aaa;
+}
+
+.showcase{
+background:#0d0d0d;
+}
+
+.video-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.video-card{
+background:#111;
+border:1px solid #242424;
+border-radius:18px;
+overflow:hidden;
+}
+
+.video-card iframe{
+width:100%;
+aspect-ratio:9/16;
+border:0;
+display:block;
+background:#000;
+}
+
+.video-info{
+padding:18px;
+}
+
+.video-info h3{
+font-size:17px;
+margin-bottom:5px;
+}
+
+.video-info p{
+color:#888;
+font-size:13px;
+}
+
+.photo-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
+
+.photo{
+aspect-ratio:1/1;
+background:#151515;
+border-radius:15px;
+overflow:hidden;
+border:1px solid #252525;
+}
+
+.photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+.photo-placeholder{
+display:flex;
+height:100%;
+align-items:center;
+justify-content:center;
+color:#666;
+font-size:14px;
+text-align:center;
+padding:20px;
+}
+
+.design-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
+
+.design{
+aspect-ratio:4/5;
+background:#121212;
+border-radius:15px;
+border:1px solid #252525;
+overflow:hidden;
+}
+
+.design img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.process{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.step{
+text-align:center;
+padding:20px;
+}
+
+.step-number{
+width:50px;
+height:50px;
+border-radius:50%;
+border:1px solid #e50914;
+color:#e50914;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:0 auto 15px;
+font-weight:900;
+}
+
+.step p{
+color:#999;
+font-size:14px;
+}
+
+.cta{
+background:#111;
+border-top:1px solid #222;
+border-bottom:1px solid #222;
+text-align:center;
+}
+
+.cta h2{
+font-size:clamp(35px,6vw,65px);
+line-height:1;
+margin-bottom:20px;
+}
+
+.cta p{
+max-width:650px;
+margin:auto;
+color:#aaa;
+}
+
+.contact{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.contact-box{
+background:#101010;
+border:1px solid #252525;
+border-radius:18px;
+padding:30px;
+}
+
+.contact-box p{
+color:#aaa;
+margin:8px 0;
+}
+
+footer{
+padding:35px 0;
+border-top:1px solid #222;
+text-align:center;
+color:#777;
+font-size:13px;
+}
+
+.whatsapp{
+position:fixed;
+right:18px;
+bottom:18px;
+background:#25D366;
+color:#000;
+padding:14px 20px;
+border-radius:50px;
+font-weight:900;
+z-index:9999;
+}
+
+@media(max-width:800px){
+
+.nav{
+display:none;
+}
+
+.about,
+.experience,
+.contact{
+grid-template-columns:1fr;
+}
+
+.cards,
+.video-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.process{
+grid-template-columns:1fr 1fr;
+}
+
+.photo-grid,
+.design-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:550px){
+
+section{
+padding:70px 0;
+}
+
+.cards,
+.video-grid,
+.photo-grid,
+.design-grid,
+.process{
+grid-template-columns:1fr;
+}
+
+h1{
+letter-spacing:-2px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+}
+
+</style></head><body><header><div class="container"><nav><div class="logo">
+KD <span>CREATION</span>
+</div><div class="nav"><a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#experience">Experience</a>
+<a href="#work">Work</a>
+<a href="#contact">Contact</a>
+
+</div></nav></div></header><section class="hero"><div class="container hero-inner"><div class="label">
+KD CREATION JODHPUR
+</div><h1>
+Create.<br>
+Capture.<br>
+<span>Inspire.</span>
+</h1><p>
+Social Media Growth & Content Production Partner
+for businesses, brands and creators.
+</p><div class="buttons"><a class="btn primary"
+href="https://wa.me/919571666080"
+target="_blank">
+Start a Project
+</a>
+
+<a class="btn secondary"
+href="#work">
+View Latest Work
+</a>
+
+</div></div></section><section id="about"><div class="container about"><div><div class="label">
+ABOUT KD CREATION
+</div><h3>
+Content is not just about posting.
+It's about creating attention.
+</h3><p>
+KD Creation Jodhpur is a social media and content production
+brand focused on helping businesses and creators build a stronger
+digital presence.
+</p><p>
+From social media management and reels to video production,
+editing, promotional content and digital advertising —
+we focus on content that communicates.
+</p></div><div class="quote">Create content.
+Build attention.
+Turn attention into opportunity.
+
+</div></div></section><section id="services"><div class="container"><div class="section-head"><small>What We Do</small>
+
+<h2>Our Services</h2></div><div class="cards"><div class="card"><div class="number">01</div><h3>Social Media Management</h3><p>
+Content planning, posting, page management and
+consistent social media presence.
+</p></div><div class="card"><div class="number">02</div><h3>Reels & Short Videos</h3><p>
+Concept, shooting, editing and short-form content
+for Instagram, Facebook and YouTube.
+</p></div><div class="card"><div class="number">03</div><h3>Video Production</h3><p>
+Business videos, promotional videos, creator content
+and cinematic short-form production.
+</p></div><div class="card"><div class="number">04</div><h3>Video Editing</h3><p>
+Professional editing, pacing, captions, transitions,
+storytelling and final delivery.
+</p></div><div class="card"><div class="number">05</div><h3>Meta Advertising</h3><p>
+Social advertising campaigns for businesses that want
+to reach relevant audiences.
+</p></div><div class="card"><div class="number">06</div><h3>Content Strategy</h3><p>
+Ideas, hooks, content planning and digital communication
+for consistent growth.
+</p></div></div></div></section><section id="experience"><div class="container"><div class="section-head"><small>Experience</small>
+
+<h2>What We've Worked On</h2></div><div class="experience"><div class="experience-card"><div class="tag">
+Professional Experience
+</div><h3>
+Vivo Experience Centre Jodhpur
+</h3><p>
+Worked with Vivo Experience Centre Jodhpur for approximately
+one year, contributing to social media page management,
+content creation, reels, promotional communication and
+digital content.
+</p></div><div class="experience-card"><div class="tag">
+Creator Portfolio
+</div><h3>
+KD Rathore — YouTube
+</h3><p>
+Our own creator platform where we experiment with
+video production, storytelling, editing, presentation,
+short-form content and audience-focused communication.
+</p></div></div></div></section><section id="work" class="showcase"><div class="container"><div class="section-head"><small>Creative Showcase</small>
+
+<h2>Latest Work</h2><p style="color:#888;margin-top:10px;">
+New videos and creative work will be added here regularly.
+</p></div><div class="video-grid"><!-- VIDEO 01 --><div class="video-card"><iframe
+src="https://www.youtube.com/embed/VIDEO_ID_1"
+allowfullscreen>
+</iframe><div class="video-info"><h3>Latest Creation</h3><p>Short-form video • KD Creation</p></div></div><!-- VIDEO 02 --><div class="video-card"><iframe
+src="https://www.youtube.com/embed/VIDEO_ID_2"
+allowfullscreen>
+</iframe><div class="video-info"><h3>Recent Work</h3><p>Reel • Video Production</p></div></div><!-- VIDEO 03 --><div class="video-card"><iframe
+src="https://www.youtube.com/embed/VIDEO_ID_3"
+allowfullscreen>
+</iframe><div class="video-info"><h3>Creative Work</h3><p>Short-form Content</p></div></div></div></div></section><section><div class="container"><div class="section-head"><small>Visual Identity</small>
+
+<h2>Design & Photography</h2></div><div class="photo-grid"><div class="photo">
+<div class="photo-placeholder">
+YOUR PHOTO 01
 </div>
-
-  </div>
-</section><section id="about">
-  <div class="container about"><div>
-  <div class="eyebrow">About KD Creation</div>
-
-  <h3>We turn local businesses into digital brands.</h3>
-
-  <p>
-    KD Creation Jodhpur is a social media and content production
-    partner helping businesses create better digital presence,
-    stronger content and more engaging social media communication.
-  </p>
-
-  <p>
-    From reels and video production to social media management,
-    editing, promotion and Meta advertising — we help businesses
-    communicate their value through content.
-  </p>
+</div><div class="photo">
+<div class="photo-placeholder">
+YOUR PHOTO 02
 </div>
-
-<div>
-  <div class="highlight">
-    Your business deserves more than just a social media page.
-    It deserves a digital presence that people remember.
-  </div>
+</div><div class="photo">
+<div class="photo-placeholder">
+YOUR PHOTO 03
 </div>
+</div></div><br><br>
 
-  </div>
-</section><section id="services">
-  <div class="container"><div class="section-title">
-  <small>What We Do</small>
-  <h2>Our Services</h2>
+<div class="design-grid"><div class="design">
+<div class="photo-placeholder">
+KD CREATION DESIGN 01
 </div>
-
-<div class="services">
-
-  <div class="card">
-    <div class="card-number">01</div>
-    <h3>Social Media Management</h3>
-    <p>
-      Content planning, posting and social media handling
-      designed for consistent digital presence.
-    </p>
-  </div>
-
-  <div class="card">
-    <div class="card-number">02</div>
-    <h3>Reels & Video Production</h3>
-    <p>
-      Short-form videos, business reels, promotional videos
-      and cinematic content.
-    </p>
-  </div>
-
-  <div class="card">
-    <div class="card-number">03</div>
-    <h3>Video Editing</h3>
-    <p>
-      Professional editing, pacing, transitions, captions,
-      storytelling and finishing.
-    </p>
-  </div>
-
-  <div class="card">
-    <div class="card-number">04</div>
-    <h3>Meta Ads</h3>
-    <p>
-      Paid social campaigns designed to help businesses
-      reach relevant audiences.
-    </p>
-  </div>
-
-  <div class="card">
-    <div class="card-number">05</div>
-    <h3>Business Promotion</h3>
-    <p>
-      Promotion videos and content for shops, showrooms,
-      restaurants and local businesses.
-    </p>
-  </div>
-
-  <div class="card">
-    <div class="card-number">06</div>
-    <h3>Photography & Videography</h3>
-    <p>
-      Business, product, event and celebration photography
-      and videography.
-    </p>
-  </div>
-
+</div><div class="design">
+<div class="photo-placeholder">
+KD CREATION DESIGN 02
 </div>
-
-  </div>
-</section><section id="work">
-  <div class="container"><div class="section-title">
-  <small>Selected Work</small>
-  <h2>Our Work</h2>
+</div><div class="design">
+<div class="photo-placeholder">
+KD CREATION DESIGN 03
 </div>
+</div></div></div></section><section><div class="container"><div class="section-head"><small>Our Process</small>
 
-<div class="portfolio">
+<h2>From Idea to Content</h2></div><div class="process"><div class="step"><div class="step-number">01</div><h3>Understand</h3><p>
+Understand the business, audience and objective.
+</p></div><div class="step"><div class="step-number">02</div><h3>Plan</h3><p>
+Develop ideas, hooks and content direction.
+</p></div><div class="step"><div class="step-number">03</div><h3>Create</h3><p>
+Shoot, edit and produce the final content.
+</p></div><div class="step"><div class="step-number">04</div><h3>Publish</h3><p>
+Deliver and publish content across digital platforms.
+</p></div></div></div></section><section class="cta"><div class="container"><h2>
+Let's Create Something Worth Watching.
+</h2><p>
+Have a business, brand or content idea?
+Let's turn it into digital content.
+</p><div class="buttons"><a class="btn primary"
+href="https://wa.me/919571666080"
+target="_blank">
+WhatsApp Us
+</a>
 
-  <div class="portfolio-item">
-    <div>
-      <h3>Bagtesh Car Wash</h3>
-      <p>Business Branding • Reels • Promotional Content</p>
-    </div>
-  </div>
+<!-- https://www.instagram.com/kdcreationjodhpur?stkn=YW9jcnlkeWhuNDQz --><a class="btn secondary"
+href=https://www.instagram.com/kdcreationjodhpur?stkn=YW9jcnlkeWhuNDQz
+target="_blank">
+Instagram
+</a>
 
-  <div class="portfolio-item">
-    <div>
-      <h3>Jewellery & Showrooms</h3>
-      <p>Product Content • Reels • Digital Promotion</p>
-    </div>
-  </div>
+</div></div></section><section id="contact"><div class="container"><div class="section-head"><small>Contact</small>
 
-  <div class="portfolio-item">
-    <div>
-      <h3>Local Businesses</h3>
-      <p>Social Media • Video Production • Promotion</p>
-    </div>
-  </div>
+<h2>Start a Conversation</h2></div><div class="contact"><div class="contact-box"><h3>
+KD Creation Jodhpur
+</h3><p>
+Social Media Growth & Content Production Partner
+</p><p>
+Jodhpur, Rajasthan
+</p></div><div class="contact-box"><h3>
+Get in Touch
+</h3><p>
+📞 <a href="tel:+919571666080">
++91 95716 66080
+</a>
+</p><p>
+💬 <a href="https://wa.me/919571666080"
+target="_blank">
+WhatsApp
+</a>
+</p><p>
+📸 <a https://www.instagram.com/kdcreationjodhpur?stkn=YW9jcnlkeWhuNDQz
+target="_blank">
+Instagram
+</a>
+</p></div></div></div></section><footer>© 2026 KD Creation Jodhpur
+<br>
+Create • Capture • Inspire
 
-</div>
-
-  </div>
-</section><section>
-  <div class="container"><div class="section-title">
-  <small>How We Work</small>
-  <h2>Simple. Creative. Focused.</h2>
-</div>
-
-<div class="process">
-
-  <div class="step">
-    <span>01</span>
-    <h3>Understand</h3>
-    <p>We understand your business, audience and goals.</p>
-  </div>
-
-  <div class="step">
-    <span>02</span>
-    <h3>Plan</h3>
-    <p>We build the right content and promotion approach.</p>
-  </div>
-
-  <div class="step">
-    <span>03</span>
-    <h3>Create</h3>
-    <p>We shoot, edit and produce content for your brand.</p>
-  </div>
-
-  <div class="step">
-    <span>04</span>
-    <h3>Grow</h3>
-    <p>We publish, promote and improve your digital presence.</p>
-  </div>
-
-</div>
-
-  </div>
-</section><section class="cta">
-  <div class="container"><h2>Ready to grow your business online?</h2>
-
-<p>
-  Let's create content that makes your business visible,
-  memorable and easier to discover.
-</p>
-
-<div class="buttons">
-
-  <a class="btn btn-primary"
-     href="https://wa.me/919571666080?text=Hello%20KD%20Creation%2C%20I%20want%20to%20grow%20my%20business%20online."
-     target="_blank">
-    WhatsApp Us
-  </a>
-
-  <!-- https://www.instagram.com/kdcreationjodhpur?stkn=YW9jcnlkeWhuNDQz -->
-  <a class="btn btn-secondary"
-     href="https://instagram.com/"
-     target="_blank">
-    Instagram
-  </a>
-
-</div>
-
-  </div>
-</section><section id="contact">
-  <div class="container"><div class="section-title">
-  <small>Let's Connect</small>
-  <h2>Start Your Project</h2>
-</div>
-
-<div class="contact">
-
-  <div class="contact-box">
-    <h3>KD Creation Jodhpur</h3>
-
-    <p>
-      Social Media Growth & Content Production Partner
-    </p>
-
-    <p>
-      📍 Jodhpur, Rajasthan
-    </p>
-  </div>
-
-  <div class="contact-box">
-
-    <h3>Contact</h3>
-
-    <p>
-      📞 <a href="tel:+919571666080">+91 95716 66080</a>
-    </p>
-
-    <p>
-      💬 <a href="https://wa.me/919571666080" target="_blank">
-      WhatsApp
-      </a>
-    </p>
-
-    <!-- https://www.instagram.com/kdcreationjodhpur?stkn=YW9jcnlkeWhuNDQz -->
-    <p>
-      📸 <a https://www.instagram.com/kdcreationjodhpur?stkn=YW9jcnlkeWhuNDQz target="_blank">
-      Instagram — KD Creations Jodhpur
-      </a>
-    </p>
-
-  </div>
-
-</div>
-
-  </div>
-</section></main><footer>
-  <div class="container">
-    © 2026 KD Creation Jodhpur. Create • Capture • Inspire.
-  </div>
 </footer><a class="whatsapp"
 href="https://wa.me/919571666080"
 target="_blank">
 WhatsApp
 </a>
 
-</body>
-</html>
+</body></html>
